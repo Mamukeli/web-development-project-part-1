@@ -89,9 +89,14 @@ This page allows customers to:
 
 ## 📚 References
 -Interaction Design Foundation. (2025). Visual hierarchy in web design. Available at: https://www.interaction-design.org/literature/topics/visual-hierarchy (Accessed: 20 April 2026).  
+<<<<<<< HEAD
 
 -Statista. (2025). On-demand economy trends in South Africa. Available at: https://www.statista.com (Accessed: 20 April 2026).  
 
 -Xneelo. (2026). Optimizing local servers for mobile businesses. Available at: https://xneelo.co.za (Accessed: 20 April 2026).  
 
+=======
+-Statista. (2025). On-demand economy trends in South Africa. Available at: https://www.statista.com (Accessed: 20 April 2026).  
+-Xneelo. (2026). Optimizing local servers for mobile businesses. Available at: https://xneelo.co.za (Accessed: 20 April 2026).  
+>>>>>>> f3ba4be638cf6cc76f6774216d01a3412fed73a2
 -SME South Africa. (2023). How to start a mobile car wash business. Available at: https://smesouthafrica.co.za (Accessed: 20 April 2026).  
