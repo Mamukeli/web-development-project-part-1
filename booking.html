@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Boost Drive Mobile Car Wash</title>
+    <title>Booking Page - Boost Drive Mobile Car Wash</title>
 </head>
 <body>
 
@@ -20,7 +20,69 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-<body>
-    
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- BOOKING SECTION -->
+        <section>
+
+            <h2>Book Your Car Wash Service</h2>
+
+            <p>
+                Use the booking form below to schedule your mobile car wash service quickly and conveniently.
+            </p>
+
+
+            <!-- BOOKING FORM -->
+            <form>
+
+                <!-- FULL NAME -->
+                <label for="fullname">Full Name:</label><br>
+                <input type="text" id="fullname" name="fullname"><br><br>
+
+                <!-- CONTACT DETAILS -->
+                <label for="contact">Contact Details:</label><br>
+                <input type="text" id="contact" name="contact"><br><br>
+
+                <!-- SERVICE SELECTION -->
+                <label for="service">Preferred Service:</label><br>
+                <select id="service" name="service">
+                    <option>Exterior Wash</option>
+                    <option>Interior Cleaning</option>
+                    <option>Full Valet Service</option>
+                    <option>Engine Cleaning</option>
+                </select><br><br>
+
+                <!-- DATE -->
+                <label for="date">Booking Date:</label><br>
+                <input type="date" id="date" name="date"><br><br>
+
+                <!-- TIME -->
+                <label for="time">Booking Time:</label><br>
+                <input type="time" id="time" name="time"><br><br>
+
+                <!-- ADDRESS -->
+                <label for="address">Location / Address:</label><br>
+                <input type="text" id="address" name="address"><br><br>
+
+                <!-- SPECIAL INSTRUCTIONS -->
+                <label for="instructions">Special Instructions:</label><br>
+                <textarea id="instructions" name="instructions" rows="4" cols="40"></textarea><br><br>
+
+                <!-- SUBMIT BUTTON -->
+                <button type="submit">Submit Booking</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Boost Drive Mobile Car Wash</p>
+    </footer>
+
 </body>
 </html>
