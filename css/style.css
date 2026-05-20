@@ -1,0 +1,342 @@
+/* =========================================
+   BOOST FORCE MOBILE CAR WASH WEBSITE
+   PREMIUM MAIN CSS STYLESHEET
+   ========================================= */
+
+/* ===== IMPORT GOOGLE FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap');
+
+/* ===== GLOBAL VARIABLES & RESET ===== */
+:root {
+    --primary-dark: #264653;
+    --accent-teal: #1FBFCF;
+    --accent-light: #A8E6EF;
+    --bg-light: #F8FAFC;
+    --white: #FFFFFF;
+    --text-muted: #567582;
+    --shadow-soft: 0 10px 30px rgba(38, 70, 83, 0.05);
+    --shadow-hover: 0 15px 35px rgba(31, 191, 207, 0.15);
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY STYLING ===== */
+body{
+    background-color: var(--bg-light); 
+    color: var(--primary-dark); 
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    padding-top: 85px; /* Smooth buffer for the new fixed/sticky header */
+}
+
+/* ===== NEW FEATURE: STICKY NAVIGATION HEADER ===== */
+header{
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px); /* Modern frosted-glass texture */
+    padding: 15px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+    border-bottom: 1px solid rgba(31, 191, 207, 0.1);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== WEBSITE LOGO ===== */
+.logo{
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--accent-teal); /* Highlight the "Boost" flavor */
+}
+
+/* ===== NAVIGATION LINKS ===== */
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--primary-dark);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.3s var(--transition-smooth);
+}
+
+/* ===== NEW FEATURE: ANIMATED LINK UNDERLINE ===== */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--accent-teal);
+    border-radius: 2px;
+    transition: width 0.3s var(--transition-smooth);
+}
+
+nav ul li a:hover{
+    color: var(--accent-teal);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* ===== HERO SECTION ===== */
+.hero{
+    padding: 100px 50px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.hero img{
+    width: 100%;
+    max-width: 800px;
+    margin-top: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(38, 70, 83, 0.08);
+}
+
+/* ===== HERO & CALL TO ACTION BUTTON ===== */
+.btn{
+    display: inline-block;
+    background-color: var(--accent-teal);
+    color: var(--white);
+    padding: 16px 42px;
+    text-decoration: none;
+    border-radius: 50px; /* Modern fully rounded pill button */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 20px rgba(31, 191, 207, 0.3);
+    transition: all 0.3s var(--transition-smooth);
+}
+
+.btn:hover{
+    background-color: var(--primary-dark);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(38, 70, 83, 0.2);
+}
+
+/* ===== SECTION LAYOUTS ===== */
+section{
+    padding: 100px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+}
+
+/* Subtle line indicator under section headers */
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-teal);
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* ===== ENHANCED SERVICES GRID ===== */
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+/* ===== NEW FEATURE: PREMIUM CARD LOOK ===== */
+.service-box{
+    border: none;
+    padding: 30px;
+    text-align: left; /* Shift text to left alignment for clean reading */
+    border-radius: 16px;
+    background-color: var(--white);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s var(--transition-smooth);
+}
+
+.service-box:hover{
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.service-box img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.service-box h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: var(--primary-dark);
+}
+
+.service-box p {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+/* ===== PREMIUM FORM SECTION ===== */
+form{
+    max-width: 550px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+}
+
+/* ===== NEW FEATURE: INTERACTIVE FIELDS ===== */
+input,
+textarea{
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 25px;
+    border: 2px solid #E2E8F0;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    background-color: #F8FAFC;
+    transition: all 0.3s var(--transition-smooth);
+}
+
+input:focus,
+textarea:focus{
+    outline: none;
+    border-color: var(--accent-teal);
+    background-color: var(--white);
+    box-shadow: 0 0 0 4px rgba(31, 191, 207, 0.15);
+}
+
+/* ===== SUBMIT BUTTON ===== */
+button{
+    width: 100%; /* Forms look stronger with full-width submit buttons */
+    background-color: var(--accent-teal);
+    color: var(--white);
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(31, 191, 207, 0.2);
+    transition: all 0.3s var(--transition-smooth);
+}
+
+button:hover{
+    background-color: var(--primary-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* ===== FOOTER STYLING ===== */
+footer{
+    background-color: var(--primary-dark);
+    color: #DBE5E9;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 100px;
+    border-top: 4px solid var(--accent-teal);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE DESIGN INTERFACE ===== */
+@media(max-width: 768px){
+    body {
+        padding-top: 130px; /* More buffer room for stacked mobile navigation */
+    }
+
+    header {
+        padding: 15px 25px;
+    }
+
+    nav{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .hero{
+        padding: 60px 20px;
+    }
+
+    .hero h1{
+        font-size: 38px;
+    }
+
+    .hero h2{
+        font-size: 18px;
+    }
+
+    section{
+        padding: 60px 20px;
+    }
+    
+    form {
+        padding: 25px;
+    }
+}
