@@ -301,69 +301,87 @@ nav ul li a:hover::after {
     margin-bottom: 30px;
 }
 
-/* ==================================================
-   SERVICES PAGE
-================================================== */
-
-.services-section {
-    max-width: 1400px;
-    margin: auto;
-    padding: 80px 40px;
-}
-
-/* Section headings */
-section h2 {
+/```css
+/* Services Intro */
+.services-intro {
     text-align: center;
-
-    font-family: 'Poppins', sans-serif;
-    font-size: 42px;
-
-    margin-bottom: 60px;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    padding: 40px 20px;
 }
 
-/* Services grid */
+/* Services Grid */
 .services-container {
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
+
     gap: 35px;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 20px 40px 80px;
 }
 
-/* Service cards */
+/* Service Cards */
 .service-box {
-    background: var(--white);
+    background-color: white;
 
     padding: 30px;
-    border-radius: 18px;
 
-    box-shadow: var(--card-shadow);
+    border-radius: 20px;
 
-    transition: var(--transition);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+    text-align: center;
+
+    transition: 0.3s ease;
 }
 
-/* Card hover */
+/* Hover Effect */
 .service-box:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--hover-shadow);
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
 }
 
-/* Service image */
+/* Service Images */
 .service-box img {
     width: 100%;
-    height: 230px;
+
+    height: 220px;
 
     object-fit: cover;
 
-    border-radius: 12px;
-    margin-bottom: 20px;
+    border-radius: 14px;
+
+    margin: 20px 0;
 }
 
-/* Service title */
+/* Service Headings */
 .service-box h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
+    margin-bottom: 15px;
 
-    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 /* ==================================================
