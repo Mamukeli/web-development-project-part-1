@@ -367,102 +367,115 @@ section h2 {
 }
 
 /* ==================================================
-   CONTACT PAGE
+   CONTACT INFORMATION SECTION
 ================================================== */
 
-.contact-section {
-    max-width: 1400px;
-    margin: auto;
+.contact-info-section {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 40px;
 
-    padding: 60px 40px;
     text-align: center;
 }
 
-/* Contact information */
-.contact-info-block,
-.contact-section p {
-    margin-bottom: 20px;
-}
-
-/* Service area box */
-.service-area-section {
-    background: var(--white);
-
-    padding: 30px;
-    margin: 40px 0;
-
-    border-radius: 16px;
-    box-shadow: var(--card-shadow);
-}
-
-/* ==================================================
-   SOCIAL MEDIA LINKS
-================================================== */
-
-.follow-us-container {
-    margin: 40px auto;
-    padding: 20px;
-}
-
-.follow-us-container h3 {
+/* Contact heading */
+.contact-info-section h2 {
     font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+
+    margin-bottom: 30px;
+}
+
+/* Paragraph styling */
+.contact-info-section p {
+    font-size: 18px;
+    color: var(--text-muted);
+
     margin-bottom: 20px;
 }
 
-/* Social links layout */
-.follow-links-wrapper {
+/* Remove list bullet alignment problem */
+.contact-info-section ul {
     list-style: none;
 
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+    padding: 0;
+    margin-top: 20px;
 }
 
-/* Social links */
-.follow-links-wrapper li a {
-    text-decoration: none;
+/* Operating hours list */
+.contact-info-section ul li {
+    font-size: 18px;
+
+    margin-bottom: 10px;
+
     color: var(--primary-dark);
-
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-
-    transition: var(--transition);
-}
-
-/* Social hover */
-.follow-links-wrapper li a:hover {
-    color: var(--accent-teal);
 }
 
 /* ==================================================
-   MAP SECTION
+   SOCIAL MEDIA SECTION
 ================================================== */
 
-.maps-global-wrapper {
+.social-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 40px;
+
+    text-align: center;
+}
+
+/* Section heading */
+.social-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+
+    margin-bottom: 35px;
+
+    color: var(--primary-dark);
+}
+
+/* Horizontal social links layout */
+.social-links {
     display: flex;
+
+    justify-content: center;
+    align-items: center;
     gap: 30px;
 
-    margin-top: 50px;
+    flex-wrap: wrap;
 }
 
-/* Maps and placeholders */
-.maps-global-wrapper iframe,
-.map-placeholder-box {
-    flex: 1;
+/* Social buttons */
+.social-btn {
+    display: inline-block;
 
-    height: 450px;
+    padding: 16px 35px;
 
-    border-radius: 20px;
-    border: 3px solid var(--white);
+    background: var(--white);
+    color: var(--primary-dark);
 
-    box-shadow: var(--card-shadow);
+    text-decoration: none;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+
+    border-radius: 50px;
+
+    border: 2px solid var(--accent-teal);
 
     transition: var(--transition);
+
+    box-shadow: var(--card-shadow);
 }
 
-/* Map hover */
-.maps-global-wrapper iframe:hover {
-    border-color: var(--accent-teal);
+/* Hover effect */
+.social-btn:hover {
+    background: var(--accent-teal);
+    color: var(--white);
+
+    transform: translateY(-4px);
+
+    box-shadow: var(--hover-shadow);
 }
 
 /* ==================================================
