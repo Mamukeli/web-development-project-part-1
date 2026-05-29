@@ -1,13 +1,13 @@
 
-/* ==================================================
+/* 
    BOOST FORCE MOBILE CAR WASH - MAIN CSS FILE
    External stylesheet used on all pages
-================================================== */
+ */
 
-/* ===== GOOGLE FONTS ===== */
+/*  GOOGLE FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700;800&display=swap');
 
-/* ===== ROOT VARIABLES ===== */
+/* ROOT VARIABLES */
 :root {
     --primary-dark: #264653;
     --accent-teal: #1FBFCF;
@@ -23,14 +23,14 @@
     --transition: 0.3s ease;
 }
 
-/* ===== RESET DEFAULT SPACING ===== */
+/* RESET DEFAULT SPACING */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== BODY STYLING ===== */
+/* BODY STYLING */
 body {
     background: var(--main-gradient);
     background-attachment: fixed;
@@ -40,9 +40,7 @@ body {
     padding-top: 90px;
 }
 
-/* ==================================================
-   HEADER & NAVIGATION
-================================================== */
+/*    HEADER & NAVIGATION   */
 
 header {
     background: rgba(255, 255, 255, 0.95);
@@ -122,9 +120,7 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* ==================================================
-   HERO SECTION
-================================================== */
+/*    HERO SECTION   */
 
 .hero {
     max-width: 1400px;
@@ -171,9 +167,7 @@ nav ul li a:hover::after {
     display: block;
     margin: 0 auto 50px auto;
 }
-/* ==================================================
-   SERVICES INTRO
-================================================== */
+/*    SERVICES INTRO   */
 
 .services-intro {
     max-width: 1000px;
@@ -194,9 +188,7 @@ nav ul li a:hover::after {
 
     color: var(--text-muted);
 }
-/* ==================================================
-   BUTTONS
-================================================== */
+/*    BUTTONS   */
 
 .btn {
     display: inline-block;
@@ -228,9 +220,7 @@ nav ul li a:hover::after {
 
     box-shadow: var(--hover-shadow);
 }
-/* ==================================================
-   FEATURES SECTION
-================================================== */
+/*    FEATURES SECTION  */
 
 .features-section {
     max-width: 1000px;
@@ -276,9 +266,7 @@ nav ul li a:hover::after {
 
     line-height: 1.8;
 }
-/* ==================================================
-   ABOUT PAGE
-================================================== */
+/*    ABOUT PAGE  */
 
 .about-section {
     max-width: 1400px;
@@ -323,7 +311,6 @@ nav ul li a:hover::after {
     margin-bottom: 30px;
 }
 
-/```css
 /* Services Intro */
 .services-intro {
     text-align: center;
@@ -406,9 +393,7 @@ nav ul li a:hover::after {
 
 }
 
-/* ==================================================
-   CONTACT INFORMATION SECTION
-================================================== */
+/*   CONTACT INFORMATION SECTION    */
 
 .contact-info-section {
     max-width: 900px;
@@ -451,9 +436,7 @@ nav ul li a:hover::after {
     color: var(--primary-dark);
 }
 
-/* ==================================================
-   SOCIAL MEDIA SECTION
-================================================== */
+/*    SOCIAL MEDIA SECTION    */
 
 .social-section {
     max-width: 1200px;
@@ -528,9 +511,24 @@ nav ul li a:hover::after {
     font-size: 18px;
     color: var(--text-muted);
 }
-/* ==================================================
-   FORMS
-================================================== */
+/*    BOOKING SECTION    */
+
+.booking-section {
+    text-align: center;
+}
+
+/* Booking heading */
+.booking-heading {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 42px;
+    font-weight: 700;
+
+    margin-bottom: 30px;
+
+    color: var(--primary-dark);
+}
+/*    FORMS     */
 
 form {
     max-width: 650px;
@@ -602,9 +600,7 @@ form button:hover {
     background: var(--primary-dark);
 }
 
-/* ==================================================
-   FOOTER
-================================================== */
+/*    FOOTER    */
 
 footer {
     background: var(--primary-dark);
@@ -620,9 +616,7 @@ footer {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* ==================================================
-   RESPONSIVE DESIGN
-================================================== */
+/*    RESPONSIVE DESIGN   */
 
 /* Tablets */
 @media (max-width: 1024px) {
