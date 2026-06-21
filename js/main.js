@@ -253,3 +253,44 @@ container.innerHTML += `
 });
 
 }
+
+/* =======================================
+PART 3 : ENQUIRY FORM
+======================================= */
+
+const enquiryForm = document.getElementById("enquiryForm");
+
+if(enquiryForm){
+
+enquiryForm.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const servicePrice =
+document.getElementById("service").value;
+
+const response =
+document.getElementById("responseBox");
+
+
+response.innerHTML =
+
+`<h3>Enquiry Submitted Successfully</h3>
+
+<p>
+
+Estimated Cost : R${servicePrice}
+
+</p>
+
+<p>
+
+Availability :
+
+Available on your selected date.
+
+</p>`;
+
+});
+
+}
