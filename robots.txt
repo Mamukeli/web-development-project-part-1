@@ -1,0 +1,8 @@
+# =====================================
+# PART 3 : ROBOTS FILE
+# Search Engine Instructions
+# =====================================
+
+User-agent: *
+
+Allow: /
