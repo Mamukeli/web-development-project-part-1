@@ -294,3 +294,47 @@ Available on your selected date.
 });
 
 }
+
+const enquiryForm = document.getElementById("enquiryForm");
+
+if(enquiryForm){
+
+enquiryForm.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const phone =
+document.getElementById("phone").value;
+
+if(phone.length !== 10){
+
+alert("Please enter a valid phone number.");
+
+return;
+
+}
+
+const service =
+document.getElementById("service").value;
+
+document.getElementById("responseBox").innerHTML =
+
+`<h3>Enquiry Submitted</h3>
+
+<p>
+
+Estimated Cost : R${service}
+
+</p>
+
+<p>
+
+Availability :
+
+Available on your selected date.
+
+</p>`;
+
+});
+
+}
