@@ -130,6 +130,82 @@ The website is fully responsive and optimized for:
 Media queries were implemented to improve layout adaptation across different screen sizes.
 
 ---
+# Part 3 Features
+
+## Interactive Features
+
+The website includes several interactive elements to improve user experience:
+
+* Accordion component on the Home page
+* Special Offer modal popup
+* Service search functionality
+* Image gallery with Lightbox display
+* CSS animations and transitions
+
+---
+
+## Forms and Validation
+
+The website includes multiple forms with validation features:
+
+* Booking form for scheduling services
+* Enquiry form for service pricing and availability
+* Contact form for customer messages
+* JavaScript form validation
+* AJAX form submission for improved user experience
+
+---
+
+## Interactive Map
+
+An interactive map was implemented using Leaflet.js to display service locations in Cape Town.
+
+Features include:
+
+* Zoom in and zoom out controls
+* Interactive markers
+* Mobile-friendly navigation
+* Location-based service display
+
+---
+
+## Search Engine Optimization (SEO)
+
+The website was optimized for search engines using:
+
+* Meta descriptions
+* Keywords
+* Open Graph tags
+* robots.txt
+* sitemap.xml
+* Clean URL structure
+* Internal linking
+
+---
+
+## Responsive Design
+
+The website is fully responsive and optimized for:
+
+* Desktop screens
+* Tablets
+* Mobile devices
+
+Media queries were implemented to improve layout adaptation across different screen sizes.
+
+---
+
+## Technologies Used
+
+The following technologies were used in the development of the website:
+
+* HTML5
+* CSS3
+* JavaScript
+* Leaflet.js
+* Git and GitHub
+* Netlify
+
 
 # References
 
