@@ -17,7 +17,6 @@ if (searchBox) {
             if (text.includes(value)) {
 
                 card.style.display = "";
-
             }
 
             else {
@@ -31,7 +30,6 @@ if (searchBox) {
     });
 
 }
-
 
 /* PART 3 : ACCORDION */
 
@@ -49,7 +47,6 @@ if (accordionBtn) {
 
 }
 
-
 /* PART 3 : SPECIAL OFFER MODAL */
 
 const offerBtn = document.getElementById("offerBtn");
@@ -57,7 +54,6 @@ const offerBtn = document.getElementById("offerBtn");
 const offerModal = document.getElementById("offerModal");
 
 const closeModal = document.getElementById("closeModal");
-
 
 if (offerBtn && offerModal) {
 
@@ -69,7 +65,6 @@ if (offerBtn && offerModal) {
 
 }
 
-
 if (closeModal && offerModal) {
 
     closeModal.addEventListener("click", () => {
@@ -80,7 +75,6 @@ if (closeModal && offerModal) {
 
 }
 
-
 /* PART 3 : LIGHTBOX GALLERY */
 
 const galleryImages = document.querySelectorAll(".gallery img");
@@ -88,7 +82,6 @@ const galleryImages = document.querySelectorAll(".gallery img");
 const lightbox = document.getElementById("lightbox");
 
 const lightboxImg = document.getElementById("lightbox-img");
-
 
 if (galleryImages.length > 0) {
 
@@ -106,7 +99,6 @@ if (galleryImages.length > 0) {
 
 }
 
-
 if (lightbox) {
 
     lightbox.addEventListener("click", () => {
@@ -114,9 +106,7 @@ if (lightbox) {
         lightbox.style.display = "none";
 
     });
-
 }
-
 
 /* PART 3 : LEAFLET MAP */
 
@@ -132,26 +122,21 @@ if (mapContainer && typeof L !== "undefined") {
 
     );
 
-
     L.tileLayer(
 
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
 
         {
-
             attribution:
 
             "&copy; OpenStreetMap contributors"
-
         }
 
     ).addTo(map);
 
-
     L.marker(
 
         [-33.9249, 18.4241]
-
     )
 
     .addTo(map)
@@ -159,16 +144,12 @@ if (mapContainer && typeof L !== "undefined") {
     .bindPopup(
 
         "Boost Force Mobile Car Wash"
-
     )
-
     .openPopup();
-
 
     L.marker(
 
         [-33.8938, 18.5095]
-
     )
 
     .addTo(map)
@@ -176,11 +157,8 @@ if (mapContainer && typeof L !== "undefined") {
     .bindPopup(
 
         "Century City Service Area"
-
     );
-
 }
-
 
 /* PART 3 : DYNAMIC SERVICES */
 
@@ -316,7 +294,6 @@ document.getElementById("responseBox");
 response.innerHTML =
 
 `
-
 <h3>
 
 Enquiry Submitted Successfully

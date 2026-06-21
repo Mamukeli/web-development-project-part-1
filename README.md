@@ -206,7 +206,6 @@ The following technologies were used in the development of the website:
 * Git and GitHub
 * Netlify
 
-
 # References
 
 * Adobe. (2025). *Principles of modern web design*. Available at: https://www.adobe.com
@@ -245,7 +244,6 @@ The following technologies were used in the development of the website:
 
 * Xneelo. (2026). *Optimizing local servers for mobile businesses*. Available at: https://xneelo.co.za
   Accessed: April 2026.
-
 
 ---
 
