@@ -151,15 +151,16 @@ PART 3 : LEAFLET INTERACTIVE MAP
  
            <section>
             <h2>Send Us a Message</h2>
-            <form>
+            <form action="mailto:info@boostforcecarwash.co.za" method="post" enctype="text/plain">
+
                 <label for="name">Full Name:</label><br>
-                <input type="text" id="name" name="name"><br><br>
+                <input type="text" id="name" name="name" required><br><br>
 
                 <label for="email">Email Address:</label><br>
-                <input type="email" id="email" name="email"><br><br>
+                <input type="email" id="email" name="email" required><br><br>
 
                 <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="5" cols="40"></textarea><br><br>
+                <textarea id="message" name="message" rows="5" cols="40" required></textarea><br><br>
 
                 <button type="submit">Send Message</button>
             </form>
