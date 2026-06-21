@@ -101,3 +101,71 @@ lightbox.style.display = "none";
 });
 
 }
+
+/* =======================================
+PART 3 : LEAFLET MAP
+======================================= */
+
+const mapContainer = document.getElementById("map");
+
+
+if(mapContainer){
+
+const map = L.map("map").setView(
+
+[-33.9249,18.4241],
+
+12
+
+);
+
+
+L.tileLayer(
+
+"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+
+{
+
+attribution:
+
+"&copy; OpenStreetMap contributors"
+
+}
+
+).addTo(map);
+
+
+
+L.marker(
+
+[-33.9249,18.4241]
+
+)
+
+.addTo(map)
+
+.bindPopup(
+
+"Boost Force Mobile Car Wash - Cape Town CBD"
+
+)
+
+.openPopup();
+
+
+
+L.marker(
+
+[-33.8938,18.5095]
+
+)
+
+.addTo(map)
+
+.bindPopup(
+
+"Century City Service Area"
+
+);
+
+}
