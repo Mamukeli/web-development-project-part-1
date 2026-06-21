@@ -1,6 +1,4 @@
-/* =========================================
-PART 3 : SERVICE SEARCH
-========================================= */
+/* PART 3 : SERVICE SEARCH */
 
 const searchBox = document.getElementById("searchService");
 
@@ -35,9 +33,7 @@ if (searchBox) {
 }
 
 
-/* =========================================
-PART 3 : ACCORDION
-========================================= */
+/* PART 3 : ACCORDION */
 
 const accordionBtn = document.querySelector(".accordion-btn");
 
@@ -54,9 +50,7 @@ if (accordionBtn) {
 }
 
 
-/* =========================================
-PART 3 : SPECIAL OFFER MODAL
-========================================= */
+/* PART 3 : SPECIAL OFFER MODAL */
 
 const offerBtn = document.getElementById("offerBtn");
 
@@ -87,9 +81,7 @@ if (closeModal && offerModal) {
 }
 
 
-/* =========================================
-PART 3 : LIGHTBOX GALLERY
-========================================= */
+/* PART 3 : LIGHTBOX GALLERY */
 
 const galleryImages = document.querySelectorAll(".gallery img");
 
@@ -126,9 +118,7 @@ if (lightbox) {
 }
 
 
-/* =========================================
-PART 3 : LEAFLET MAP
-========================================= */
+/* PART 3 : LEAFLET MAP */
 
 const mapContainer = document.getElementById("map");
 
@@ -192,9 +182,7 @@ if (mapContainer && typeof L !== "undefined") {
 }
 
 
-/* =========================================
-PART 3 : DYNAMIC SERVICES
-========================================= */
+/* PART 3 : DYNAMIC SERVICES */
 
 const services = [
 
@@ -279,9 +267,7 @@ container.innerHTML += `
 }
 
 
-/* =========================================
-PART 3 : ENQUIRY FORM
-========================================= */
+/* PART 3 : ENQUIRY FORM */
 
 const enquiryForm =
 
@@ -359,10 +345,7 @@ Available on your selected date.
 
 }
 
-
-/* =========================================
-PART 3 : CONTACT FORM AJAX
-========================================= */
+/* PART 3 : CONTACT FORM AJAX */
 
 const contactForm =
 
