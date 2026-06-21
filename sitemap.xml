@@ -2,28 +2,40 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-<loc>https://yourwebsite.netlify.app/</loc>
-</url>
+    <url>
+        <loc>
+            https://gregarious-elf-0261dc.netlify.app/
+        </loc>
+    </url>
 
-<url>
-<loc>https://yourwebsite.netlify.app/about.html</loc>
-</url>
+    <url>
+        <loc>
+            https://gregarious-elf-0261dc.netlify.app/about.html
+        </loc>
+    </url>
 
-<url>
-<loc>https://yourwebsite.netlify.app/services.html</loc>
-</url>
+    <url>
+        <loc>
+            https://gregarious-elf-0261dc.netlify.app/services.html
+        </loc>
+    </url>
 
-<url>
-<loc>https://yourwebsite.netlify.app/booking.html</loc>
-</url>
+    <url>
+        <loc>
+            https://gregarious-elf-0261dc.netlify.app/booking.html
+        </loc>
+    </url>
 
-<url>
-<loc>https://yourwebsite.netlify.app/enquiry.html</loc>
-</url>
+    <url>
+        <loc>
+            https://gregarious-elf-0261dc.netlify.app/enquiry.html
+        </loc>
+    </url>
 
-<url>
-<loc>https://yourwebsite.netlify.app/contact.html</loc>
-</url>
+    <url>
+        <loc>
+            https://gregarious-elf-0261dc.netlify.app/contact.html
+        </loc>
+    </url>
 
 </urlset>
