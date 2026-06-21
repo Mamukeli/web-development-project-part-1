@@ -1,32 +1,49 @@
+/* =========================================
+PART 3 : SERVICE SEARCH
+========================================= */
+
 const searchBox = document.getElementById("searchService");
 
-if (searchBox) { // Added a safety check to ensure element exists
-  searchBox.addEventListener("keyup", () => {
-    const value = searchBox.value.toLowerCase();
-    const cards = document.querySelectorAll(".service-box");
+if (searchBox) {
 
-    cards.forEach(card => {
-      // Use textContent for better performance and to include hidden text
-      let text = card.textContent.toLowerCase();
+    searchBox.addEventListener("keyup", () => {
 
-      if (text.includes(value)) {
-        card.style.display = ""; // Reverts to CSS default (block, flex, etc.)
-      } else {
-        card.style.display = "none";
-      }
+        const value = searchBox.value.toLowerCase();
+
+        const cards = document.querySelectorAll(".service-box");
+
+        cards.forEach(card => {
+
+            const text = card.textContent.toLowerCase();
+
+            if (text.includes(value)) {
+
+                card.style.display = "";
+
+            }
+
+            else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
     });
-  });
+
 }
-/* =======================================
-   PART 3 : ACCORDION FUNCTION
-   Opens and closes additional information
-======================================= */
+
+
+/* =========================================
+PART 3 : ACCORDION
+========================================= */
 
 const accordionBtn = document.querySelector(".accordion-btn");
 
 if (accordionBtn) {
 
-    accordionBtn.addEventListener("click", function () {
+    accordionBtn.addEventListener("click", () => {
 
         const content = document.querySelector(".accordion-content");
 
@@ -36,9 +53,10 @@ if (accordionBtn) {
 
 }
 
-/* =======================================
-PART 3 : MODAL POPUP
-======================================= */
+
+/* =========================================
+PART 3 : SPECIAL OFFER MODAL
+========================================= */
 
 const offerBtn = document.getElementById("offerBtn");
 
@@ -47,30 +65,31 @@ const offerModal = document.getElementById("offerModal");
 const closeModal = document.getElementById("closeModal");
 
 
-if(offerBtn){
+if (offerBtn && offerModal) {
 
-offerBtn.addEventListener("click",()=>{
+    offerBtn.addEventListener("click", () => {
 
-offerModal.style.display="flex";
+        offerModal.style.display = "flex";
 
-});
+    });
+
+}
+
+
+if (closeModal && offerModal) {
+
+    closeModal.addEventListener("click", () => {
+
+        offerModal.style.display = "none";
+
+    });
 
 }
 
 
-if(closeModal){
-
-closeModal.addEventListener("click",()=>{
-
-offerModal.style.display="none";
-
-});
-
-}
-
-/* =======================================
+/* =========================================
 PART 3 : LIGHTBOX GALLERY
-======================================= */
+========================================= */
 
 const galleryImages = document.querySelectorAll(".gallery img");
 
@@ -79,100 +98,103 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
 
-galleryImages.forEach(image => {
+if (galleryImages.length > 0) {
 
-image.addEventListener("click", function(){
+    galleryImages.forEach(image => {
 
-lightbox.style.display = "flex";
+        image.addEventListener("click", () => {
 
-lightboxImg.src = this.src;
+            lightbox.style.display = "flex";
 
-});
+            lightboxImg.src = image.src;
 
-});
+        });
 
-
-if(lightbox){
-
-lightbox.addEventListener("click", function(){
-
-lightbox.style.display = "none";
-
-});
+    });
 
 }
 
-/* =======================================
+
+if (lightbox) {
+
+    lightbox.addEventListener("click", () => {
+
+        lightbox.style.display = "none";
+
+    });
+
+}
+
+
+/* =========================================
 PART 3 : LEAFLET MAP
-======================================= */
+========================================= */
 
 const mapContainer = document.getElementById("map");
 
+if (mapContainer && typeof L !== "undefined") {
 
-if(mapContainer){
+    const map = L.map("map").setView(
 
-const map = L.map("map").setView(
+        [-33.9249, 18.4241],
 
-[-33.9249,18.4241],
+        12
 
-12
-
-);
-
-
-L.tileLayer(
-
-"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-
-{
-
-attribution:
-
-"&copy; OpenStreetMap contributors"
-
-}
-
-).addTo(map);
+    );
 
 
+    L.tileLayer(
 
-L.marker(
+        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
 
-[-33.9249,18.4241]
+        {
 
-)
+            attribution:
 
-.addTo(map)
+            "&copy; OpenStreetMap contributors"
 
-.bindPopup(
+        }
 
-"Boost Force Mobile Car Wash - Cape Town CBD"
-
-)
-
-.openPopup();
+    ).addTo(map);
 
 
+    L.marker(
 
-L.marker(
+        [-33.9249, 18.4241]
 
-[-33.8938,18.5095]
+    )
 
-)
+    .addTo(map)
 
-.addTo(map)
+    .bindPopup(
 
-.bindPopup(
+        "Boost Force Mobile Car Wash"
 
-"Century City Service Area"
+    )
 
-);
+    .openPopup();
+
+
+    L.marker(
+
+        [-33.8938, 18.5095]
+
+    )
+
+    .addTo(map)
+
+    .bindPopup(
+
+        "Century City Service Area"
+
+    );
 
 }
 
-/* =======================================
-PART 3 : DYNAMIC SERVICE LOADING
-======================================= */
+
+/* =========================================
+PART 3 : DYNAMIC SERVICES
+========================================= */
 
 const services = [
 
@@ -192,7 +214,7 @@ name:"Interior Cleaning",
 
 price:"R120",
 
-description:"Interior dashboard and seat cleaning."
+description:"Interior dashboard cleaning and sanitizing."
 
 },
 
@@ -222,14 +244,16 @@ name:"Full Vehicle Detailing",
 
 price:"R350",
 
-description:"Complete vehicle detailing package."
+description:"Complete inside and outside detailing."
 
 }
 
 ];
 
 
-const container = document.getElementById("dynamic-services");
+const container =
+
+document.getElementById("dynamic-services");
 
 
 if(container){
@@ -254,76 +278,70 @@ container.innerHTML += `
 
 }
 
-/* =======================================
+
+/* =========================================
 PART 3 : ENQUIRY FORM
-======================================= */
+========================================= */
 
-const enquiryForm = document.getElementById("enquiryForm");
+const enquiryForm =
+
+document.getElementById("enquiryForm");
+
 
 if(enquiryForm){
 
-enquiryForm.addEventListener("submit", function(e){
+enquiryForm.addEventListener(
+
+"submit",
+
+function(e){
 
 e.preventDefault();
 
-const servicePrice =
-document.getElementById("service").value;
-
-const response =
-document.getElementById("responseBox");
-
-
-response.innerHTML =
-
-`<h3>Enquiry Submitted Successfully</h3>
-
-<p>
-
-Estimated Cost : R${servicePrice}
-
-</p>
-
-<p>
-
-Availability :
-
-Available on your selected date.
-
-</p>`;
-
-});
-
-}
-
-const enquiryForm = document.getElementById("enquiryForm");
-
-if(enquiryForm){
-
-enquiryForm.addEventListener("submit",function(e){
-
-e.preventDefault();
 
 const phone =
+
 document.getElementById("phone").value;
+
 
 if(phone.length !== 10){
 
-alert("Please enter a valid phone number.");
+alert(
+
+"Please enter a valid phone number."
+
+);
 
 return;
 
 }
 
-const service =
+
+const servicePrice =
+
 document.getElementById("service").value;
 
-document.getElementById("responseBox").innerHTML =
 
-`<h3>Enquiry Submitted</h3>
+const response =
+
+document.getElementById("responseBox");
+
+
+response.innerHTML =
+
+`
+
+<h3>
+
+Enquiry Submitted Successfully
+
+</h3>
 
 <p>
 
-Estimated Cost : R${service}
+Estimated Cost :
+
+R${servicePrice}
 
 </p>
 
@@ -333,7 +351,43 @@ Availability :
 
 Available on your selected date.
 
-</p>`;
+</p>
+
+`;
+
+});
+
+}
+
+
+/* =========================================
+PART 3 : CONTACT FORM AJAX
+========================================= */
+
+const contactForm =
+
+document.querySelector(".contact-form");
+
+
+if(contactForm){
+
+contactForm.addEventListener(
+
+"submit",
+
+function(e){
+
+e.preventDefault();
+
+
+alert(
+
+"Message sent successfully!"
+
+);
+
+
+this.reset();
 
 });
 
