@@ -168,7 +168,29 @@ nav ul li a:hover::after {
     margin: 0 auto 50px auto;
 }
 /*    SERVICES INTRO   */
+/* PART 3 : SEARCH BOX */
 
+.search-wrapper{
+
+text-align:center;
+
+margin-bottom:40px;
+
+}
+
+.search-box{
+
+width:60%;
+
+padding:15px;
+
+border-radius:10px;
+
+border:2px solid #1FBFCF;
+
+font-size:16px;
+
+}
 .services-intro {
     max-width: 1000px;
     margin: 80px auto 40px;
@@ -672,4 +694,59 @@ footer {
     form {
         padding: 30px;
     }
+}
+/* ====================================
+   PART 3 : ACCORDION STYLING
+==================================== */
+
+.accordion{
+
+max-width:700px;
+
+margin:40px auto;
+
+}
+
+.accordion-btn{
+
+width:100%;
+
+padding:18px;
+
+font-size:18px;
+
+font-weight:700;
+
+border:none;
+
+cursor:pointer;
+
+background:#1FBFCF;
+
+color:white;
+
+border-radius:10px;
+
+}
+
+.accordion-content{
+
+display:none;
+
+background:white;
+
+padding:20px;
+
+margin-top:10px;
+
+border-radius:10px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+.accordion-content.show{
+
+display:block;
+
 }
