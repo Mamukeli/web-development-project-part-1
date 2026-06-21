@@ -169,3 +169,87 @@ L.marker(
 );
 
 }
+
+/* =======================================
+PART 3 : DYNAMIC SERVICE LOADING
+======================================= */
+
+const services = [
+
+{
+
+name:"Exterior Wash",
+
+price:"R80",
+
+description:"Complete exterior vehicle cleaning."
+
+},
+
+{
+
+name:"Interior Cleaning",
+
+price:"R120",
+
+description:"Interior dashboard and seat cleaning."
+
+},
+
+{
+
+name:"Vacuuming",
+
+price:"R70",
+
+description:"Deep vacuum cleaning."
+
+},
+
+{
+
+name:"Wax and Polish",
+
+price:"R180",
+
+description:"Professional waxing and polishing."
+
+},
+
+{
+
+name:"Full Vehicle Detailing",
+
+price:"R350",
+
+description:"Complete vehicle detailing package."
+
+}
+
+];
+
+
+const container = document.getElementById("dynamic-services");
+
+
+if(container){
+
+services.forEach(service=>{
+
+container.innerHTML += `
+
+<div class="service-box">
+
+<h3>${service.name}</h3>
+
+<p>${service.description}</p>
+
+<p><strong>${service.price}</strong></p>
+
+</div>
+
+`;
+
+});
+
+}
