@@ -67,3 +67,37 @@ offerModal.style.display="none";
 });
 
 }
+
+/* =======================================
+PART 3 : LIGHTBOX GALLERY
+======================================= */
+
+const galleryImages = document.querySelectorAll(".gallery img");
+
+const lightbox = document.getElementById("lightbox");
+
+const lightboxImg = document.getElementById("lightbox-img");
+
+
+galleryImages.forEach(image => {
+
+image.addEventListener("click", function(){
+
+lightbox.style.display = "flex";
+
+lightboxImg.src = this.src;
+
+});
+
+});
+
+
+if(lightbox){
+
+lightbox.addEventListener("click", function(){
+
+lightbox.style.display = "none";
+
+});
+
+}

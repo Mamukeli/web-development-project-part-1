@@ -814,3 +814,81 @@ cursor:pointer;
 border-radius:8px;
 
 }
+
+/* ====================================
+PART 3 : IMAGE GALLERY
+==================================== */
+
+.gallery{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+margin:60px auto;
+
+}
+
+.gallery img{
+
+width:250px;
+
+height:180px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+}
+
+
+/* LIGHTBOX */
+
+#lightbox{
+
+display:none;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,0.85);
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+}
+
+
+#lightbox img{
+
+max-width:80%;
+
+max-height:80%;
+
+border-radius:15px;
+
+}
