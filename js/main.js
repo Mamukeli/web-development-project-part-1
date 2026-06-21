@@ -35,3 +35,35 @@ if (accordionBtn) {
     });
 
 }
+
+/* =======================================
+PART 3 : MODAL POPUP
+======================================= */
+
+const offerBtn = document.getElementById("offerBtn");
+
+const offerModal = document.getElementById("offerModal");
+
+const closeModal = document.getElementById("closeModal");
+
+
+if(offerBtn){
+
+offerBtn.addEventListener("click",()=>{
+
+offerModal.style.display="flex";
+
+});
+
+}
+
+
+if(closeModal){
+
+closeModal.addEventListener("click",()=>{
+
+offerModal.style.display="none";
+
+});
+
+}
